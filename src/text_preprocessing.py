@@ -9,8 +9,3 @@ def clean_text(text):
     return text
 
 
-sample_text = "Python, SQL, Machine Learning!!!"
-
-cleaned = clean_text(sample_text)
-
-print(cleaned)

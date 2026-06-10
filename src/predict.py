@@ -24,5 +24,16 @@ candidate = {
 candidate_df = pd.DataFrame([candidate])
 
 prediction = model.predict(candidate_df)
+probability = model.predict_proba(candidate_df)
 
-print("Prediction:", prediction[0])
+if prediction[0] == 1:
+    result = "Suitable"
+    confidence = probability[0][1] * 100
+else:
+    result = "Not Suitable"
+    confidence = probability[0][0] * 100
+
+print("Candidate Evaluation")
+print("--------------------")
+print("Prediction :", result)
+print(f"Confidence : {confidence:.2f}%")

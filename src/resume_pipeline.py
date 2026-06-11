@@ -1,9 +1,9 @@
 import joblib
 import pandas as pd
 
-from pdf_reader import extract_text_from_pdf
-from text_preprocessing import clean_text
-from skill_extractor import extract_skills
+from src.pdf_reader import extract_text_from_pdf
+from src.text_preprocessing import clean_text
+from src.skill_extractor import extract_skills
 
 
 # Step 1: Read PDF

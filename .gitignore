@@ -1,4 +1,26 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Model files
+# keep model.pkl if you want to deploy with the trained model
+# *.pkl
+
+# OS / Editor
+.DS_Store
 .vscode/
+.idea/
+
+# Environment variables
+.env

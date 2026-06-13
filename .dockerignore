@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+uploads/*
+!uploads/.gitkeep
+tests/
+.env
+.DS_Store
+.vscode/
+.idea/

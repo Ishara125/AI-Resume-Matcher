@@ -28,3 +28,36 @@ async def upload_resume(file: UploadFile = File(...)):
         "confidence": f"{confidence:.2f}%",
         "skills": skills
     }
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy",
+        "service": "AI Resume Matcher API"
+    }
+
+@app.get("/model-info")
+def model_info():
+    return {
+        "model": "RandomForestClassifier",
+        "task": "Resume suitability prediction",
+        "input_type": "PDF resume",
+        "output": ["Suitable", "Not Suitable"],
+        "features": [
+            "python",
+            "sql",
+            "machine_learning",
+            "power_bi",
+            "excel",
+            "statistics",
+            "java",
+            "spring_boot",
+            "react",
+            "node",
+            "mern",
+            "docker",
+            "aws",
+            "education_level",
+            "experience_years"
+        ]
+    }

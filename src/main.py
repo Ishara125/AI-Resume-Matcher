@@ -18,7 +18,12 @@ app.add_middleware(
 def home():
     return {"message": "AI Resume Matcher API is running"}
 
-
+@app.get("/version")
+def version():
+    return {
+        "version": "cors-v2",
+        "message": "CORS middleware updated"
+    }
 
 
 @app.post("/upload-resume")

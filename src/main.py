@@ -3,8 +3,18 @@ from src.resume_pipeline import evaluate_resume
 from fastapi import FastAPI, UploadFile, File
 import shutil
 from pathlib import Path
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://localhost:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
